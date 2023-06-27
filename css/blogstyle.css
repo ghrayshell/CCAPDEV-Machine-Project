@@ -65,7 +65,7 @@ div.parallax3 {
 }
 
 div.link-container{
-    height:720px;
+    height:740px;
     background-color:var(--primary);
     font-size:36px;
     padding: 20px;
@@ -83,7 +83,7 @@ div.flex-product-container > div{
     margin: 20px;
     font-size: 30px;
     width: 40%;
-    height: 670px;
+    height: 690px;
     line-height: 30px;
 }
 
@@ -106,4 +106,6 @@ div.text-divider{
     font-size: 30px;
     font-weight: bolder;
     height: 100px;
+    padding: 1%;
+    text-align: center;
 }
