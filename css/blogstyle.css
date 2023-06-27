@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+}
+div.parallax {
+    overflow: hidden;
+    /* The image used */
+    background-image: url("../images/b01.jpg");
+  
+    /* Set a specific height */
+    min-height: 550px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div.link-container{
+    height:500px;
+    background-color:red;
+    font-size:36px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+div.flex-product-container{
+    display: flex;
+}
+
+div.flex-product-container > div{
+    background-color: #f1f1f1;
+    margin: 20px;
+    font-size: 30px;
+    width: 40%;
+    height: 450px;
+}
