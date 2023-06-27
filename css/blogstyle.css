@@ -83,11 +83,27 @@ div.flex-product-container > div{
     margin: 20px;
     font-size: 30px;
     width: 40%;
-    height: 650px;
+    height: 670px;
     line-height: 30px;
 }
 
 .img-blogs{
     width: 100%;
     height: 220px;
+}
+
+p{
+    font-size: 20px;
+}
+
+div.text-divider{
+    margin: auto;
+    height: 10px;
+    font-size: 20px;
+}
+
+#headText{
+    font-size: 30px;
+    font-weight: bolder;
+    height: 100px;
 }
