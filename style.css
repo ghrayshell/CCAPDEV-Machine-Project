@@ -143,14 +143,3 @@ img:hover {
   margin: 10px;
   text-align: justify;
 }
-
-.footer {
-  padding-left: 15%;
-  padding-right: 15%;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  color: ivory;
-  background-color: #3a783c;
-  text-shadow: 2px 2px #729f81;
-  text-align: center;
-}
