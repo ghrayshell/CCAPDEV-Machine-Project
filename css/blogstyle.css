@@ -1,6 +1,12 @@
 body{
     margin: 0;
 }
+
+:root{
+    --primary: #2d7b49;
+    --accent: #729f81;
+}
+
 div.parallax1 {
     overflow: hidden;
     /* The image used */
@@ -60,7 +66,7 @@ div.parallax3 {
 
 div.link-container{
     height:500px;
-    background-color:red;
+    background-color:var(--primary);
     font-size:36px;
     padding: 20px;
     overflow: hidden;
