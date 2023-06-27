@@ -43,5 +43,13 @@ button {
     transition-duration: 0.4s;
     font-size: 16px;
     margin: 10px;
+    background-color: transparent;
+  border: 2px solid ivory;
+  color: ivory;
   }
+
+button:hover {
+  background-color: ivory;
+  color: #2d7b49;
+}
 
