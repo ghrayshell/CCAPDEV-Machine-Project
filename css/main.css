@@ -1,3 +1,6 @@
+body{
+  margin: 0;
+}
 .navbar {
     overflow: hidden;
     border-bottom: solid 1px rgb(93,93,93);
