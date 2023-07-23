@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create Account | Chemag</title>
+	<link rel="stylesheet" href="./css/loginstyle.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <img src="images/chemag-trading-logo.jpg" />
+
+        <div class="navbar-right">
+            <ul>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="companyprofile.html">About</a></li>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </div>
+   </div>
+
+        <div class = "sign-container">
+            <h1>Create Account</h1>
+            <form action="/signup" method="post">
+
+                <label>Company Name</label>
+                <br>
+                <input type="text" id="cname" name="cname"><br><br>
+                <label>Enter Email Address</label>
+                <br>
+                <input type="text" id="email" name="email"><br><br>
+                <label>Enter Password</label>
+                <br>
+                <input type="password"><br><br>
+                <label>Re-enter Password</label>
+                <br>
+                <input type="password" id="password" name="password"><br><br>
+            </form>
+            <br>
+            <button type="submit onclick="window.location.href='dashboard.html';">Confirm</button>
+            <br>
+            <br>
+        </div>
+
+        <div class="footer">
+            <p>Copyright &#169 2023 Chemag Trading Corporation</p>
+        </div>
+</body>
+</html>
