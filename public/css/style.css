@@ -111,11 +111,6 @@ img {
   margin: 10px;
 }
 
-img:hover {
-  cursor: pointer;
-  box-shadow: 10px 10px #729f81;
-  transition-duration: 0.4s;
-}
 
 .feature button {
   background-color: transparent;
