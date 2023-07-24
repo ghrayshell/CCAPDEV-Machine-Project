@@ -1,21 +1,27 @@
 const mongoose = require("mongoose")
 
-mongoose.connect("mongodb://localhost:27017/chemagdb")
-
-.then(() =>{
-    console.log("mongodb connected");
+mongoose.connect("mongodb://127.0.0.1:27017/chemagdb").then(()=>{
+    console.log('mongo connected');
 })
-.catch(() =>{
-    console.log("failed to connect");
+.catch((e)=>{
+    console.log('mongo failed');
 })
 
-const useraccSchema = new mongoose.Schema({
-    name:{
+const userSchema = new mongoose.Schema({
+    cname:{
         type: String,
         required:true
+    },
+    email:{
+        type: String,
+        required: true
     },
     password:{
         type: String,
         required:true
     }
 })
+
+const collection = new mongoose.model("useraccs", userSchema)
+
+module.exports = collection
