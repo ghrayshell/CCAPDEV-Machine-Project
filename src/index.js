@@ -30,7 +30,7 @@ app.post("/login",async (req, res)=>{
         const check = await collection.findOne({cname:req.body.cname})
 
         if(check.password === req.body.password){
-            res.status(201).render("home", { naming: `${req.body.password}+${req.body.cname}` })
+            res.status(201).render("dashboard", { naming: `${req.body.password}+${req.body.cname}` })
         }
         else{[
             res.send("wrong password")

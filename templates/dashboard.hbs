@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Client Dashboard | Chemag Trading Corporation</title>
+
+        <link rel="stylesheet" type="text/css" media="all" href= "css/dash.css" >
+        <link rel="stylesheet" type="text/css" media="all" href= "css/main.css" >
+
+    </head>
+    <body>
+        <div class="navbar">
+            <img src="chemag-trading-logo.jpg" />
+
+            <div class="navbar-right">
+                <ul>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/blogs">Blogs</a></li>
+                    <li><a href="/products">Products</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/home">Home</a></li>
+                </ul>
+            </div>
+       </div>
+
+        <div class="flex-container">
+
+            <div class="dashnav">
+                <div style="margin:3%; padding: 2%">
+                    <h1 style="color: ivory;
+                    text-shadow: 2px 2px #729f81; text-align: center">Client Company Name</h1>
+                    <button onclick="window.location.href='login.html';">Logout</button>
+                </div>
+                
+            </div>
+
+            <div class="dashboard">
+                <div class="featureddiv">
+                    <div class="feature">
+                        <h1 style="color: ivory;
+                            text-shadow: 2px 2px #729f81; margin-left:0;">Dashboard</h1>
+
+                        <div class="product-flex">
+                            <ul>
+                                <li><h3>Red Tea - 2pcs ordered</h3> <button>Add Qty</button><button>Subtract Qty</button></li>
+                                <li><h3>Black Gulaman - 9pcs ordered</h3> <button>Add Qty</button><button>Subtract Qty</button></li>
+                                 <li><h3>Lemon Iced Tea - 5pcs ordered</h3> <button>Add Qty</button><button>Subtract Qty</button></li>
+                            </ul>
+                        </div>
+
+                        <button style="margin-top:5%" id="send">Send Additional Order</button>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+        <div class="footer">
+            <p>Copyright &#169 2023 Chemag Trading Corporation</p>
+        </div>
+    </body>
+</html>
