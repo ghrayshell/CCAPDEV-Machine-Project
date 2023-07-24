@@ -71,6 +71,30 @@ app.post("/signup", async (req, res)=>{
     })
 })
 
+app.get("/login", (req, res) =>{
+    res.render("login")
+})
+
+app.get("/home", (req, res) =>{
+    res.render("home")
+})
+
+app.get("/blogs", (req, res) =>{
+    res.render("blogs")
+})
+
+app.get("/contact", (req, res) =>{
+    res.render("contact")
+})
+
+app.get("/products", (req, res) =>{
+    res.render("products")
+})
+
+app.get("/about", (req, res) =>{
+    res.render("about")
+})
+
 app.listen(3000, () =>{
     console.log("port connected");
 })
