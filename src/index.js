@@ -13,9 +13,6 @@ const templatePath = path.join(__dirname,'../templates')
 const publicPath = path.join(__dirname, '../public')
 const imagesPath = path.join(__dirname, '../images')
 
-console.log(publicPath);
-console.log(imagesPath);
-
 app.set("view engine", "hbs")
 app.set("views", templatePath)
 app.use(express.static(publicPath))
@@ -30,19 +27,15 @@ app.post("/login",async (req, res)=>{
         const check = await collection.findOne({cname:req.body.cname})
 
         if(check.password === req.body.password){
-            res.status(201).render("dashboard", { naming: `${req.body.password}+${req.body.cname}` })
+            res.status(201).render("dashboard", { naming: `${req.body.cname}` })
         }
-        else{[
-            res.send("wrong password")
-        ]}
+        else{
+            res.send("User does not match system");
+        }
     }
     catch(e){
-        res.send("wrong details")
+        res.send("User does not match system");
     }
-})
-
-app.get("/signup", (req, res) =>{
-    res.render("signup")
 })
 
 app.post("/signup", async (req, res)=>{
@@ -52,23 +45,14 @@ app.post("/signup", async (req, res)=>{
         password:req.body.password
     }
 
-    const checking = await collection.findOne({cname: req.body.cname})
+    await collection.insertMany([data]) 
 
-    try{
-        if(checking.cname === req.body.cname && checking.password === req.body.password){
-            res.send("user details already exists")
-        }
-        else{
-            await collection.insertMany([data]) 
-        }
-    }
-    catch{
-        res.send("wrong inputs")
-    }
-    
-    res.status(201).render("home", {
-        naming: req.body.cname
-    })
+    res.status(201).render("dashboard", { naming: req.body.cname });
+})
+
+
+app.get("/signup", (req, res) =>{
+    res.render("signup")
 })
 
 app.get("/login", (req, res) =>{
