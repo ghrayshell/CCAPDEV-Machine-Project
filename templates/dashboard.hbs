@@ -13,7 +13,7 @@
 
             <div class="navbar-right">
                 <ul>
-                    <li><a href="/login">Login</a></li>
+                    <li><a href="/home">Logout</a></li>
                     <li><a href="/blogs">Blogs</a></li>
                     <li><a href="/products">Products</a></li>
                     <li><a href="/contact">Contact</a></li>
@@ -23,17 +23,17 @@
             </div>
        </div>
 
-        <div class="flex-container">
+<div class="flex-container">
 
             <div class="dashnav">
                 <div style="margin:3%; padding: 2%">
                     <h1 style="color: ivory;
-                    text-shadow: 2px 2px #729f81; text-align: center">Client Company Name</h1>
+                    text-shadow: 2px 2px #729f81; text-align: center">{{naming}}</h1>
                     <button onclick="window.location.href='login.html';">Logout</button>
                 </div>
                 
             </div>
-
+            
             <div class="dashboard">
                 <div class="featureddiv">
                     <div class="feature">
@@ -42,9 +42,27 @@
 
                         <div class="product-flex">
                             <ul>
-                                <li><h3>Red Tea - 2pcs ordered</h3> <button>Add Qty</button><button>Subtract Qty</button></li>
-                                <li><h3>Black Gulaman - 9pcs ordered</h3> <button>Add Qty</button><button>Subtract Qty</button></li>
-                                 <li><h3>Lemon Iced Tea - 5pcs ordered</h3> <button>Add Qty</button><button>Subtract Qty</button></li>
+                                <li><h3>Red Tea</h3>
+                                    <div class=”counter”>
+                                        <button class=up>+</button>
+                                        <span class=count>0</span>
+                                        <button class=down>-</button>
+                                    </div>
+                                </li>
+                                <li><h3>Black Gulaman</h3> 
+                                    <div class=”counter”>
+                                        <button class=up>+</button>
+                                        <span class=count>0</span>
+                                        <button class=down>-</button>
+                                    </div>
+                                </li>
+                                 <li><h3>Lemon Iced Tea</h3>
+                                    <div class=”counter”>
+                                        <button class=up>+</button>
+                                        <span class=count>0</span>
+                                        <button class=down>-</button>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
 
@@ -59,4 +77,22 @@
             <p>Copyright &#169 2023 Chemag Trading Corporation</p>
         </div>
     </body>
+    <script type="application/javascript">
+        var up_btns = document.getElementsByClassName("up");
+        var down_btns = document.getElementsByClassName("down");
+        for(var i = 0; i < up_btns.length; i++){
+            up_btns[i].addEventListener("click", function(e){
+                e.target.parentElement.children[1].innerHTML = parseInt(e.target.parentElement.children[1].innerHTML) + 1;
+            });
+        }
+        for(var j = 0; j < up_btns.length; j++){
+            down_btns[j].addEventListener("click", function(e){
+                if(parseInt(e.target.parentElement.children[1].innerHTML) === 0){
+                    alert("Cannot reduce below 0");
+                }else{
+                    e.target.parentElement.children[1].innerHTML = parseInt(e.target.parentElement.children[1].innerHTML) - 1;
+                }
+            });
+        }
+    </script>
 </html>
